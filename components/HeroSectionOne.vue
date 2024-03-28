@@ -76,7 +76,7 @@
               {{ obj.amount }}
             </p>
             <div
-              class="flex gap-[2px] sm:gap-2 text-[10px] items-center justify-center"
+              class="flex gap-[2px] sm:gap-2 text-[15px] items-center justify-center"
             >
               <Icon :name="obj.icon"></Icon> <span>{{ obj.name }}</span>
             </div>
@@ -88,6 +88,32 @@
 </template>
 
 <script setup>
+import { useContentStore } from "~/store/content";
+const contentStore = useContentStore();
+const { getCourseDetails } = contentStore;
+const Content = ref(null);
+const solutions = reactive([
+  { name: "Video Lessons", icon: "ri:play-circle-fill", amount: "764" },
+  { name: "Courses", icon: "ri:book-3-fill", amount: "40" },
+  { name: "15 hours", icon: "ri:time-fill", amount: "64" },
+]);
+onMounted(async () => {
+  await getCourseDetails()
+    .then((data) => {
+      Content.value = [...data];
+    })
+    .catch((err) => err);
+
+  if (Content) {
+    Content?.value?.forEach((el) => {
+      if (el.courseContent === "Course Details") {
+        solutions[0].amount = el.VideoLessonsAmount;
+        solutions[1].amount = el.CourseAmount;
+        solutions[2].amount = el.Duration;
+      }
+    });
+  }
+});
 const text = reactive([
   "Google",
   "Google",
@@ -95,11 +121,6 @@ const text = reactive([
   "Google",
   "Google",
   "Google",
-]);
-const solutions = reactive([
-  { name: "Video Lessons", icon: "ri:play-circle-fill", amount: 763 },
-  { name: "Course", icon: "ri:book-3-fill", amount: 40 },
-  { name: "15 hours", icon: "ri:time-fill", amount: 64 },
 ]);
 </script>
 

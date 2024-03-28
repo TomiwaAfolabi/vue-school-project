@@ -94,9 +94,33 @@
 </template>
 
 <script setup>
+import { useContentStore } from "~/store/content";
+const contentStore = useContentStore();
+const { getProfessionalCardContent } = contentStore;
+const Content = ref(null);
+onMounted(async () => {
+  await getProfessionalCardContent()
+    .then((data) => {
+      Content.value = [...data];
+    })
+    .catch((err) => err);
+
+  if (Content) {
+    Content?.value?.forEach((el) => {
+      if (el.professionalContent === "Professional card points") {
+        CardInfo[0].title = el.titles?.[0];
+        CardInfo[1].title = el.titles?.[1];
+        CardInfo[2].title = el.titles?.[2];
+        CardInfo[3].title = el.titles?.[3];
+        CardInfo[4].title = el.titles?.[4];
+      }
+    });
+  }
+});
+
 const CardInfo = reactive([
   {
-    title: "All Video Courses",
+    title: "All Video Course",
     validIcon: "ri:checkbox-circle-fill",
     infoIcon: "ri:information-fill",
     isValid: true,

@@ -1,6 +1,8 @@
 <template>
   <div>
     <Head>
+      <Title> Vue School.io </Title>
+      <Meta name="description" content="Vue School.io Home page" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
