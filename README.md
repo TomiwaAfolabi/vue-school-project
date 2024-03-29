@@ -2,15 +2,13 @@
 
 cd vs-project
 
-Start Sanity server on `http://localhost:3333`
+Start sanity server on `http://localhost:3333`
 
-# npm
+**npm**
 
 npm run dev
 
 ## Updating dynamic content in the Hero section
-
-![HeroContent](https://drive.google.com/file/d/1L7COldQ4F1wMBiiyf-Sw3IwEtPIIrIR7/view?usp=sharing)
 
 Select 'heroheader' schema
 
@@ -26,8 +24,6 @@ Update the field 'ButtonText' to change the call to action button text which is 
 
 ## Updating lessons, courses and hours element
 
-![CourseContent](https://drive.google.com/file/d/16aOe3kx0p40OUPkv-iydsOBIqLgvMwBK/view?usp=sharing)
-
 Select 'coursedetails' schema
 
 Select 'Course Details' field
@@ -40,9 +36,7 @@ Update the field 'Duration' to change the content of "hours" element from "64"
 
 ## Updating bullet points
 
-![CardContent](https://drive.google.com/file/d/1gu0F09Ioqg6ikNdLUBje6xx5lW4-Mg1X/view?usp=sharing)
-
-## Updating Basic Card bullet points
+### Updating Basic Card bullet points
 
 Select 'basicCardContent' schema
 
@@ -50,7 +44,7 @@ Select 'Basic Card Points' field
 
 Update the 'title' array field with the bullet point list in the order of how they will be displayed.
 
-## Updating Professional Card bullet points
+### Updating Professional Card bullet points
 
 Select 'professionalCardContent' schema
 
@@ -58,7 +52,7 @@ Select 'Professional Card Points' field
 
 Update the 'title' array field with the bullet point list in the order of how they will be displayed.
 
-## Updating Basic Ultra Card bullet points
+### Updating Basic Ultra Card bullet points
 
 Select 'basicUltraContent' schema
 
