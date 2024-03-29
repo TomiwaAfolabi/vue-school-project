@@ -47,9 +47,9 @@
           />
         </div>
       </div>
-      <div class="flex justify-center items-center mt-[60px] md:pr-5">
+      <div class="flex justify-center items-center mt-[10px] sm:mt-[60px]">
         <img
-          class="max-w-[320px] lg:max-w-[602px]"
+          class="max-w-full lg:max-w-[602px] p-4"
           src="/assets/hero-header-img.svg"
         />
       </div>

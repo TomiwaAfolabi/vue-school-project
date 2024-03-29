@@ -1,6 +1,6 @@
 <template>
   <!-- hero body section -->
-  <div class="bg-[#212435] relative text-white h-[1000px] md:h-[950px]">
+  <div class="bg-[#212435] relative text-white h-[968px] md:h-[950px]">
     <div class="relative top-[-44px]">
       <img class="w-[100%]" src="/assets/hero-body-bg.svg" />
     </div>
@@ -8,7 +8,7 @@
       <img class="w-[100%]" src="/assets/hero-body-bg-2.svg" />
     </div>
     <div
-      class="flex flex-col justify-center items-center absolute mx-auto top-[70px] left-0 right-0 gap-[100px]"
+      class="flex flex-col justify-center items-center absolute mx-auto top-[70px] left-0 right-0 gap-[24px] sm:gap-[100px]"
     >
       <div
         class="w-full flex flex-col justify-center items-center gap-10 pl-8 pr-8"
@@ -70,13 +70,13 @@
             Full Stack <span class="text-gradient">Vue Training </span>Solutions
           </h1>
         </div>
-        <div class="flex gap-2 md:gap-[40px]">
+        <div class="flex gap-2 md:gap-[40px] p-2">
           <div v-for="(obj, i) in solutions" :key="i">
             <p class="text-gradient text-[64px] sm:text-[90px] font-[500]">
               {{ obj.amount }}
             </p>
             <div
-              class="flex gap-[2px] sm:gap-2 text-[15px] items-center justify-center"
+              class="flex gap-[2px] sm:gap-2 text-[10px] sm:text-[15px] items-center justify-center"
             >
               <Icon :name="obj.icon"></Icon> <span>{{ obj.name }}</span>
             </div>

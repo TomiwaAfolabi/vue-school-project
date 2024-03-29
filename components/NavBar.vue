@@ -5,9 +5,8 @@
     <div class="flex">
       <div class="flex items-center sm:hidden">
         <Icon
-          class="w-[28px] h-[24px] cursor-pointer"
+          class="w-[28px] h-[24px] cursor-pointer iconColor"
           name="material-symbols:menu-rounded"
-          color="white"
         />
       </div>
 
@@ -17,7 +16,7 @@
       <ul
         v-for="(link, index) in links"
         :key="index"
-        class="flex gap-[0px] md:gap-[2px] lg:gap-[2px] xl:gap-[5px] items-center hover:cursor-pointer"
+        class="flex gap-[0px] md:gap-[2px] lg:gap-[2px] xl:gap-[5px] items-center hover:cursor-pointer iconColor"
       >
         <NuxtLink
           class="text-white font-[100] lg:font-[200] xl:font-[400] sm:text-[9px] md:text-[12px] lg:text-[15px] xl:text-[17px] hover:text-[#0BD88F]"
@@ -26,8 +25,7 @@
         <Icon
           v-if="link.value"
           name="ic:baseline-arrow-drop-down"
-          class="hover:bg-[#0BD88F]"
-          color="white #0BD88F"
+          class="hover:color-[#0BD88F]"
         />
       </ul>
     </nav>
@@ -67,5 +65,11 @@ const links = reactive([
 <style>
 .gradient:hover {
   background: linear-gradient(to right, #0bd88f, #00c2ff);
+}
+.iconColor {
+  color: white;
+}
+.iconColor:hover {
+  color: #0bd88f;
 }
 </style>
