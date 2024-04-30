@@ -48,10 +48,7 @@
         </div>
       </div>
       <div class="flex justify-center items-center mt-[10px] sm:mt-[60px]">
-        <img
-          class="max-w-full lg:max-w-[602px] p-4"
-          src="/assets/hero-header-img.svg"
-        />
+        <img class="p-4" src="/assets/hero-header-img.svg" />
       </div>
     </div>
   </div>
